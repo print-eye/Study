@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        .taobao {
+            width: 520px;
+            height: 280px;
+            margin: 100px auto;
+            position: relative;
+        }
+        .arrow-l,
+        .arrow-r {
+            width: 20px;
+            height: 30px;
+            position: absolute;
+            top: 50%;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: #ffffff;
+            background: rgba(0, 0, 0, .2);
+            text-align: center;
+            line-height: 30px;
+        }
+        .arrow-l {
+            left: 0;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .arrow-r {
+            right: 0;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .arrow-l:hover {
+            background: rgba(0, 0, 0, .4);
+        }
+        .arrow-r:hover {
+            background: rgba(0, 0, 0, .4);
+        }
+        .circle {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            margin-left: -35px;
+            margin-bottom: 15px;
+            width: 70px;
+            height: 13px;
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 7px;
+        }
+        .circle li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 3px;
+        }
+        /* 注意优先级 */
+        .circle .current {
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+<body>
+    <div class="taobao">
+        <a href="#" class="arrow-l"> < </a>
+        <a href="#" class="arrow-r"> > </a>
+        <ul class="circle">
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <img src="images/taobao.jpg">
+    </div>
+</body>
+</html>
