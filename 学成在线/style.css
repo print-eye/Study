@@ -13,6 +13,7 @@ li {
     margin: auto;
 }
 button {
+    cursor: pointer;
     border: none;
 }
 .clearfix:before,
@@ -65,6 +66,7 @@ button {
     border-right: none;
     padding-left: 20px;
     color: #cccccc;
+    outline: none;
 }
 .search button {
     float: left;
@@ -79,6 +81,7 @@ button {
     font-size: 14px;
     margin-left: 30px;
     color: #666666;
+    vertical-align: middle;
 }
 .banner {
     height: 420px;
