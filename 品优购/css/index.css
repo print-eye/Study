@@ -1,0 +1,116 @@
+.w .main {
+    width: 980px;
+    height: 455px;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+.w .main .focus {
+    position: relative;
+    width: 720px;
+    height: 455px;
+    background-color: purple;
+}
+.w .main .newsflash {
+    width: 250px;
+    height: 455px;
+}
+.pl,
+.pr {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 30px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, .3);
+    font-family: "icomoon";
+    text-align: center;
+    line-height: 45px;
+}
+.pl:hover,
+.pr:hover {
+    background-color: rgba(0, 0, 0, .4);
+}
+.pr {
+    right: 0;
+}
+.points {
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: 15px;
+    background-color: rgba(0, 0, 0, .4);
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
+}
+.points li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-top: 5px;
+    margin-left: 8px;
+}
+ul li .points-red {
+    background-color: #c81623;
+}
+.news {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+.lifeservice {
+    height: 209px;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+    overflow: hidden;
+}
+.bargain {
+    margin-top: 5px;
+}
+.news-hd {
+    padding: 0 15px;
+    height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+}
+.news-hd h5 {
+    font-size: 14px;
+    line-height: 33px;
+}
+.news-hd a {
+    line-height: 33px;
+}
+.news-hd a::after {
+    content: "\e920";
+    font-family: "icomoon";
+    margin-left: 5px;
+}
+.news-bd {
+    padding-top: 5px;
+}
+.news-bd ul li {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;  /* 溢出省略号 */
+    height: 24px;
+    line-height: 24px;
+    margin-left: 15px;
+}
+.lifeservice ul {
+    width: 252px;
+}
+.lifeservice ul li {
+    float: left;
+    width: 63px;
+    height: 73px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    text-align: center;
+}
+.lifeservice ul li i {
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    margin-top: 12px;
+    background: url(../images/icons.png) -19px -15px ;
+}
