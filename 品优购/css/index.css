@@ -114,3 +114,102 @@ ul li .points-red {
     margin-top: 12px;
     background: url(../images/icons.png) -19px -15px ;
 }
+.recommend {
+    height: 163px;
+    margin-top: 12px;
+    background-color: #ebebeb;
+}
+.recom-hd {
+    width: 205px;
+    height: 163px;
+    float: left;
+    background-color: #5c5251;
+    text-align: center;
+    padding-top: 30px;
+}
+.recom-bd {
+    float: left;
+}
+.recom-bd li {
+    position: relative;
+    float: left;
+}
+.recom-bd li img {
+    width: 248px;
+    height: 163px;
+}
+.recom-bd li:nth-child(-n+3)::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    width: 1px;
+    height: 145px;
+    background-color: #ddd;
+}
+.think {
+    height: 273px;
+    margin-top: 20px;
+}
+.think-hd {
+    height: 40px;
+    background-color: #ffffff;
+    padding-right: 20px;
+    border-bottom: 1px solid #ededed;
+}
+.think-hd h4 {
+    float: left;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 400;
+}
+.think-hd i {
+    float: right;
+    line-height: 40px;
+    font-size: 12px;
+    color: #666666;
+} 
+.think-hd i::after {
+    content: "\ea2e";
+    font-family: "icomoon";
+    margin-left: 8px;
+}
+.think-hd a:hover i {
+    color: #c81623;
+}
+.think-bd {
+    height: 232px;
+    border: 1px solid #ededed;
+    border-top: 0;
+}
+.think-bd li {
+    position: relative;
+    float: left;
+    height: 232px;
+    width: 199px;
+    text-align: center;
+    padding-top: 20px;
+}
+.think-txt {
+    position: relative;
+    width: 120px;
+    height: 32px;
+    margin-left: 25px;
+}
+.think-txt strong {
+    position: absolute;
+    top: 38px;
+    left: 0px;
+    color: #c81623;
+    font-size: 16px;
+    font-weight: 500;
+}
+.think-bd li:nth-child(-n+5)::after {
+    content: "";
+    width: 1px;
+    height: 63px;
+    background-color: #ededed;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
