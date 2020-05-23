@@ -212,3 +212,64 @@ ul li .points-red {
     right: 0;
     bottom: 10px;
 }
+.floor .w {
+    margin-top: 30px;
+}
+.box-hd {
+    height: 30px;
+    border-bottom: 2px solid #c81623;
+}
+.box-hd h5 {
+    float: left;
+    color: #c81623;
+    font-size: 18px;
+    font-weight: 400;
+}
+.tab-list {
+    float: right;
+    line-height: 30px;
+}
+.tab-list li {
+    float: left;
+}
+.tab-list li a {
+    padding: 0 15px;
+}
+.box-bd {
+    height: 361px;
+}
+.tab-list-item>div {
+    float: left;
+    height: 361px;
+}
+.col-210 {
+    width: 210px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.col-329 {
+    width: 329px;
+}
+.col-221 {
+    width: 221px;
+    border-right: 1px solid #cccccc;
+}
+.col-219 {
+    width: 219px;
+}
+.col-210 ul {
+    padding-left: 12px;
+}
+.col-210 ul li {
+    float: left;
+    width: 85px;
+    height: 34px;
+    border-bottom: 1px solid #cccccc;
+    text-align: center;
+    line-height: 33px;
+    margin-right: 10px;
+}
+.bb {
+    display: block;
+    border-bottom: 1px solid #cccccc;
+}
