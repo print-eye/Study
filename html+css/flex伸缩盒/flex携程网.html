@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-width: 540px;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+        .row {
+            width: 100%;
+            height: 90px;
+            margin: 5px 0;
+            background-color: pink;
+            border-radius: 8px;
+            display: flex;
+        }
+        .row1 {
+            flex: 1;
+            background-color: purple;
+        }
+        .row2 {
+            flex: 1;
+            flex-direction: column;
+            display: flex;
+        }
+        .row3 {
+            flex: 1;
+            flex-direction: column;
+            display: flex;
+        }
+        .h-1,
+        .h-2 {
+            flex: 1;
+            background-color: red;
+        }
+        .b-1,
+        .b-2 {
+            flex: 1;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="row">
+            <div class="row1"></div>
+            <div class="row2">
+                <div class="h-1">1</div>
+                <div class="b-1">1</div>
+            </div>
+            <div class="row3">
+                <div class="h-2">1</div>
+                <div class="b-2">1</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row1"></div>
+            <div class="row2">
+                <div class="h-1">1</div>
+                <div class="b-1">1</div>
+            </div>
+            <div class="row3">
+                <div class="h-2">1</div>
+                <div class="b-2">1</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row1"></div>
+            <div class="row2">
+                <div class="h-1">1</div>
+                <div class="b-1">1</div>
+            </div>
+            <div class="row3">
+                <div class="h-2">1</div>
+                <div class="b-2">1</div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
