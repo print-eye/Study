@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var birth = prompt('请输入您的出生年份：');
+        var birth1 = 2020 - birth;
+        alert('您今年' + birth1 + '岁');  //使用隐式转换
+
+        var birth = prompt('请输入您的出生年份：');
+        var birth1 = 2020 - parseInt(birth)
+        alert('您今年' + birth1 + '岁');  //使用parseInt
+
+        var birth = prompt('请输入您的出生年份：');
+        var birth1 = 2020 - Number(birth)
+        alert('您今年' + birth1 + '岁');  //使用强制转换
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -7,6 +7,16 @@
     <script>
         var age = prompt('请输入您的年龄')
         alert('您今年' + age + '岁了')
+        console.log(age.length) //检测长度
+        console.log(isNaN(age)) //检测是否为非数字型
+        console.log(typeof age) //检测类型
+        // 转换成数字型
+        console.log(parseInt('120'))  //整数(不存在四舍五入)
+        console.log(parseInt('120px')) //去掉后面的字母，要数字打头才去
+        console.log(parseFloat('120.2136')) //浮点数
+        console.log(parseFloat('120.2136px')) //去掉后面的字母，要数字打头才去
+        console.log(Number('123')) //强制转换
+        console.log('12' - 0) //隐式转换
     </script>
 </head>
 <body>
