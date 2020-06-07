@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINI ATM</title>
+    <script>
+        var money = 100
+        while (true) {
+            var num = prompt('请输入您需要的操作：' + '\n' + '1.存钱' + '\n' + '2.取钱' + '\n' + '3.显示余额' + '\n' + '4.退出' + '\n' + '注意您当前账户余额为100元')
+            switch (parseFloat(num)) {
+            case 1:
+                var add = parseFloat(prompt('请输入您要存入的金额：'))
+                money = money + add
+                alert('您现在的余额是：' + money + '元')
+                break
+            case 2:
+                var reduce = parseFloat(prompt('请输入您要取出的金额：'))
+                money = money - reduce
+                if (money < 0) {
+                    alert('您的余额不足，请输入正确的金额')
+                }   else {
+                    alert('现金取出成功' + '\n' + '您当前的余额为：' + money)
+                }
+                break
+            case 3:
+                alert('您当前的余额为：' + money)
+                break
+            case 4:
+                alert('正在退出当前程序，请稍等。。。')
+                break
+            default:
+                alert('您输入的指令错误')
+                break
+            }
+            if (num == 4) {
+                break;
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: -webkit-linear-gradient(left, #F97794, #623AA2);
+        }
+        .thanks {
+            width: 400px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            color: #cccccc;
+            margin: 30% auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="thanks">感 谢 使 用 (￣▽￣)"</div>
+</body>
+</html>
