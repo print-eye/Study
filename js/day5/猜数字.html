@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getRandom (min,max) {
+            return Math.floor(Math.random() * (max - min)) + min
+        }
+        var random = getRandom(1,50)
+        for(var i = 10; i > 0; i--) {
+            var num = prompt('请您输入一个1~10之间的一个数字')
+            if (num > random) {
+                alert('您猜的数字过大')
+            } else if (num < random) {
+                alert('您猜的数字过小')
+            } else {
+                alert('您猜对了！！')
+                break
+            }
+        } 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

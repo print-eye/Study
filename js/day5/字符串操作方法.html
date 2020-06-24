@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //concat(str1,str2,str3...) 
+        var str = 'andy'
+        console.log(str.concat('red'))
+
+        //substr('从start位置开始（索引号）'，'截取几个字符')
+        var str1 = '改革春风吹满地'
+        console.log(str1.substr(2, 2))
+
+        //替换字符 replace('被替换的字符'，'替换为的字符') 他只会替换第一个字符
+        var str2 = 'andy'
+        console.log(str2.replace('a', 'b'))
+            //有一个字符串'hdauohidsajkncajvjioaijonnskcp'要求把里面所有的o替换为*
+        var str3 = 'hdauohidsajkncajvjioaijonnskcp'
+        while (str3.indexOf('0') != -1) {
+            str3.replace('o', '*')
+        }
+        console.log(str3)
+
+        //字符串转化为数组 split('分隔符') 前面我们学过join把数组转换为字符串
+        var str4 = 'red,pink,blue'
+        console.log(str4.split(',')) //取决于字符串中用什么分隔符进行分隔
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

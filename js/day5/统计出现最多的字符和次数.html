@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 有一个对象来判断是否有该属性 对象['属性名']
+        // var o = {
+        //     age: 18
+        // }
+        // if (o['age']) {
+        //     console.log('里面没有该属性')
+        // } else {
+        //     console.log('里面没有该属性')
+        // }
+
+        //判断一个字符串“abcoefoxyozzopp”中出现最多的字符，并统计其字数
+        //核心算法：利用charAt()遍历这个字符串
+        //把每个字符串都存储给对象，如果对象没有该属性，就为1，如果存在了就+1
+        //遍历对象，得到最大值和该字符
+        var str = 'abcoefoxyozzopp'
+        var o = {}
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i)
+            if (o[chars]) {
+                o[chars]++
+            } else {
+                o[chars] = 1
+            }
+        }
+        console.log(o)
+            //遍历对象
+        var max = 0
+        var ch = ''
+        for (var j in o) {
+            //j 得到的属性名
+            //0[j] 得到的是属性值
+            if (o[j] > max) {
+                max = o[j]
+                ch = j
+            }
+        }
+        console.log(max)
+        console.log(j)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
