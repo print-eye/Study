@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+        var divs = document.querySelectorAll('div')
+        divs[0].onclick = function() {
+            alert('欢迎来到本页面')
+            divs[0].onclick = null //1 传统方式解绑事件
+        }
+        divs[1].addEventListener('click', fn)
+
+        function fn() {
+            alert('欢迎第二次来到本页面')
+            divs[1].removerEventListener('click', fn) //2 事件监听解绑事件 注意不要使用匿名函数
+        }
+        divs[2].attachEvent('onchick', fn1)
+
+        function fn1() {
+            alert('欢迎第三次来到本页面')
+            divs[2].detachEvent('onclick', fn1)
+        }
+    </script>
+</body>
+
+</html>

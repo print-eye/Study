@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 400px;
+            border-bottom: 1px solid #cccccc;
+            margin: 100px auto;
+        }
+        
+        .box input {
+            width: 370px;
+            height: 30px;
+            border: 0px;
+            outline: none;
+        }
+        
+        .picture {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            background-color: red;
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="picture" id="eye"></div>
+        <input type="password" id="pwd">
+    </div>
+    <script>
+        var eye = document.getElementById('eye')
+        var pwd = document.getElementById('pwd')
+        var flag = 0
+        eye.onclick = function() {
+            //点击一次后，flag要变化
+            if (flag == 0) {
+                pwd.type = 'text'
+                eye.style.backgroundColor = 'green'
+                flag = 1
+            } else {
+                pwd.type = 'password'
+                eye.style.backgroundColor = 'red'
+                flag = 0
+            }
+        }
+    </script>
+</body>
+
+</html>

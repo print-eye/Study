@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first {
+            width: 600px;
+            margin: 100px auto;
+        }
+        
+        p {
+            display: inline-block;
+            font-size: 12px;
+            color: #999999;
+        }
+        
+        .box {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: green;
+            margin: -2px 5px;
+        }
+        
+        .wrong {
+            color: red;
+        }
+        
+        .true {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">
+        <input type="password">
+        <div class="box"></div>
+        <p>请输入6~16位密码</p>
+    </div>
+    <script>
+        //首先判断的事件是表单失去焦点 onblur
+        //如果输入正确则提示正确的信息颜色为绿色小图标变化
+        //如果输入不是6~16，则提示错误信息颜色为红色 小图标变化
+        //应为里面变化样式较多，我们采取className修改样式
+        //1 获取元素
+        var input = document.querySelector('input')
+        var box = document.querySelector('.box')
+        var massage = document.querySelector('p')
+            //2 注册时间
+        input.onblur = function() {
+            if (this.value.length < 6 || this.value.length > 16) {
+                massage.className = 'wrong'
+                massage.innerHTML = '您输入的字符有误'
+                box.style.backgroundColor = 'red'
+            } else {
+                massage.className = 'true'
+                massage.innerHTML = '您输入的字符正确'
+                box.style.backgroundColor = 'green'
+            }
+        }
+    </script>
+</body>
+
+</html>

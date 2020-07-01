@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>删除</button>
+    <ul>
+        <li>APPLE</li>
+        <li>SAMSUNG</li>
+        <li>HUAWEI</li>
+    </ul>
+    <script>
+        var btn = document.querySelector('button')
+        var ul = document.querySelector('ul')
+        btn.onclick = function() {
+            ul.removeChild(ul.children[0]) //删除元素 node.removeChild(child)
+        }
+    </script>
+</body>
+
+</html>

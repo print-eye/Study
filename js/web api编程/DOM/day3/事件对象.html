@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>123</div>
+    <script>
+        //事件对象
+        var div = document.querySelector('div')
+        div.onclick = function(event) {
+                console.log(event)
+            }
+            //1 event就是一个事件对象 写到我们侦听函数的小括号里面 当形参来看
+            //2 时间按对象只有有了对象才会存在，他是系统给我们自动创建的，不要我们传递参数
+            //3 事件对象是我们事件的一系列相关数据的集合，跟事件相关，比如鼠标点击里面就包括了鼠标的相关信息，鼠标坐标，如果是键盘事件里面就包含键盘事件的信息，比如判断用户按下了哪个键
+            //4 这个事件对象我们是可以自己命名的 比如说event evt e
+            //5 事件对象也有兼容性的问题IE678 通过window.event
+        div.addEventListener('click', function(event1) {
+            console.log(event1)
+        })
+    </script>
+</body>
+
+</html>

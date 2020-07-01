@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>传统方式</button>
+    <button>事件监听</button>
+    <button>IE9 attachEvent</button>
+    <script>
+        var btns = document.querySelectorAll('button')
+            //1传统方式注册事件
+            //(1)只能添加一个储存器
+        btns[0].onclick = function() {
+                alert('第一种方法')
+            }
+            //2利用事件监听注册事件 addEventListener 
+            //(1)里面的事件类型是字符串，必定加引号，而且不带on
+            //(2)同一个元素 同一个事件可以添加多个侦听器（事件处理程序）
+            //(3)存在兼容性问题 仅支持IE9以上的浏览器
+        btns[1].addEventListener('click', function() {
+                alert('第二种方法')
+            })
+            //3 attachEvent IE9之前的版本兼容
+        btns[2].attachEvent('onclick', function() {
+            alert('第三种方法')
+        })
+    </script>
+</body>
+
+</html>

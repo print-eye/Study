@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        //innerText和innerHtml之间的区别
+        //1 innerText
+        var div = document.querySelector('div')
+        div.innerText = '<strong>今天是</strong>2020-06-26' //不显示
+            //2 innerHtml
+        div.innerHTML = '<strong>今天是</strong>2020-06=26' //显示
+    </script>
+
+</body>
+
+</html>
