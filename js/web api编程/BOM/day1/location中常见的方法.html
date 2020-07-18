@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <button>点击1</button>
+            <button>点击2</button>
+            <button>点击3</button>
+        </div>
+        <script>
+            var div = document.querySelector("div");
+            div.children[0].addEventListener("click", function () {
+                location.assign("http://www.baidu.com");
+            }); //记录浏览地址 可以实现后退功能
+            div.children[1].addEventListener("click", function () {
+                location.replace("http://www.sohu.com");
+            }); //不记录浏览地址 不能实现后退功能
+            div.children[2].addEventListener("click", function () {
+                location.reload(true);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //1 keyup 和 keydown 事件不区分字母大小写 a 和 A 的ASCLL码值都是65
+            //2 keypress 区分字母大小写 a返回的是97 A 返回的是65
+            document.addEventListener("keydown", function (e) {
+                //console.log(e.key); //可以直接得到键位但是存在比较大的兼容性问题
+                console.log(e.keyCode); //得到触发键位的ASCLL码值
+            });
+            document.addEventListener("keypress", function (e) {
+                console.log(e.keyCode);
+                if (e.keyCode === 97) {
+                    alert("您按下了a键");
+                } else {
+                    alert("您没有按下A键");
+                }
+            });
+        </script>
+    </body>
+</html>

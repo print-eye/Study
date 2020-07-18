@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div></div>
+        <script>
+            console.log(location.search);
+            //1 先去掉其中的问号 substr('起始的位置',截取几个字符) 省略第二个默认到最后
+            var first = location.search.substr(1); // uname=andy
+            //2 利用=把字符串分割为数组 split('=')
+            var arr = first.split("=");
+            //3 把数据写入到div中
+            var div = document.querySelector("div");
+            div.innerHTML = arr[1] + "欢迎您！！！";
+        </script>
+    </body>
+</html>

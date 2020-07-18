@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div {
+                width: 200px;
+                height: 400px;
+                margin: 100px auto;
+                background-color: pink;
+            }
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var div = document.querySelector("div");
+                var button = document.querySelector("button");
+                var time = setTimeout(function () {
+                    div.style.display = "none";
+                }, 2000);
+                button.addEventListener("click", function () {
+                    clearTimeout(time);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button>停止计时器</button>
+        <div>123</div>
+    </body>
+</html>

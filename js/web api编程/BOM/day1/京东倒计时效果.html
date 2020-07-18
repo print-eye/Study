@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            div {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                background-color: black;
+                color: white;
+                margin: 100px 5px;
+                line-height: 50px;
+            }
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var hour = document.querySelector(".one"); //小时的盒子
+                var minute = document.querySelector(".two"); //分钟的盒子
+                var second = document.querySelector(".three"); //秒的盒子
+                var inputTime = +new Date("2020-7-2 12:00:00");
+                countDown();
+                setInterval(countDown, 1000);
+                function countDown(time) {
+                    var nowTime = +new Date();
+                    var times = (inputTime - nowTime) / 1000;
+                    var h = parseInt((times / 60 / 60) % 24);
+                    h = h < 10 ? "0" + h : h;
+                    var m = parseInt((times / 60) % 60);
+                    m = m < 10 ? "0" + m : m;
+                    var s = parseInt(times % 60);
+                    s = s < 10 ? "0" + s : s;
+                    hour.innerHTML = h;
+                    minute.innerHTML = m;
+                    second.innerHTML = s;
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </body>
+</html>

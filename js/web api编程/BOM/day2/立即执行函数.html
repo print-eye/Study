@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            //1 立即执行函数：不需要调用，立马就能执行的函数
+            //2 写法(function(){})() 或者 (function() {} ())
+            //可以传递参数进来
+            //两个立即执行函数之间要加一个; 务必务必！！！
+            //3 立即执行函数最大的作用就是 独立创建了一个作用域 每一个作用域中的变量为局部变量 运行完毕就释放
+            (function (a, b) {
+                console.log(a + b);
+            })(1, 4);
+            (function (a, b) {
+                console.log(a + b);
+            })(1, 4);
+        </script>
+    </body>
+</html>

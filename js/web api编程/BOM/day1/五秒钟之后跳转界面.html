@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var btn = document.querySelector("button");
+                var div = document.querySelector("div");
+                btn.addEventListener("click", function () {
+                    var time = 5;
+                    timer(); //提前调用函数让文字不再延时显示
+                    setInterval(timer, 1000);
+                    function timer() {
+                        if (time == 0) {
+                            location.href = "http://www.baidu.com";
+                        } else {
+                            div.innerHTML =
+                                "您将在" + time + "秒后跳转到百度主页";
+                            time--;
+                        }
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button>点击跳转</button>
+        <div></div>
+    </body>
+</html>
