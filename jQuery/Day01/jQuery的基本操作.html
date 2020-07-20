@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="../../jQuery.min.js"></script>
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            //$("div").hide();
+            //1. 等待页面DOM加载完毕再去执行js代码
+            $(document).ready(function () {
+                $("div").hide();
+            });
+            //2. 等待页面DOM加载完毕再去执行js代码 (优先选择)
+            $(function () {
+                $("div").hide();
+            });
+        </script>
+        <div></div>
+    </body>
+</html>

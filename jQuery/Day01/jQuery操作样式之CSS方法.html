@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div {
+                width: 200px;
+                height: 200px;
+                background-color: pink;
+            }
+        </style>
+        <script src="../../jQuery.min.js"></script>
+    </head>
+    <body>
+        <div></div>
+        <script>
+            // 操作样式之CSS方法
+            // 如果只写属性名，则是返回属性值
+            $(function () {
+                console.log($("div").css("width"));
+                //参数是属性名，属性值，逗号分隔，是设置一组样式，属性必须加引号，值如果是数字可以不用跟单位和引号
+                $("div").css("background", "red");
+                //更改多组CSS样式
+                $("div").css({
+                    height: 400,
+                    width: 400,
+                });
+            });
+        </script>
+    </body>
+</html>

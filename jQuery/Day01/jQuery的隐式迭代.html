@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="../../jQuery.min.js"></script>
+        <style>
+            div {
+                color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="one">12321</div>
+        <div class="one">12321</div>
+        <div class="one">12321</div>
+        <div class="one">12321</div>
+
+        <div class="two">12321</div>
+        <div class="two">12321</div>
+        <div class="two">12321</div>
+        <div class="two">12321</div>
+        <script>
+            //jQuery 隐式迭代 内部隐秘遍历 给每一个元素添加css的方法
+            $(function () {
+                $(".one").css("background", "pink");
+            });
+            //原生js需要自行遍历
+            var two = document.querySelectorAll(".two"); //
+            for (var i = 0; i < two.length; i++) {
+                two[i].style.background = "green";
+            }
+        </script>
+    </body>
+</html>

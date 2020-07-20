@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: pink;
+            }
+        </style>
+        <script src="../../jQuery.min.js"></script>
+    </head>
+    <body>
+        <div></div>
+        <script>
+            //1. DOM对象转化为jQuery对象
+            //(1) 直接获取视频，得到的就是jQuery对象
+            $("div");
+            //(2) 已经使用了原生js 获取过来的就是DOM对象 我们要进行转换
+            var myDiv = document.querySelector("div"); //获取
+            $(myDiv); //准换 （注意不需要加引号）
+            //2. jQuery对象转换为DOM对象
+            //(1) $('div')[index] index是索引号
+            $("div")[0].hide();
+            //(2) $('div').get(index) index是索引号
+            $("div").get(0).hide();
+        </script>
+    </body>
+</html>
